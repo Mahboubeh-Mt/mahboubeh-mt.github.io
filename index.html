@@ -3,47 +3,60 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mahboubeh Motaghi — Data Scientist</title>
-  <meta name="description" content="Portfolio of Mahboubeh Motaghi: neuroimaging, AI, and data science. Links to GitHub, GitLab, LinkedIn, Google Scholar, and CV." />
+  <title>Mahboubeh Motaghi — Data Scientist & PhD Candidate</title>
+  <meta name="description" content="Portfolio of Mahboubeh Motaghi: neuroimaging, AI, and data science. Links to GitHub, GitLab, LinkedIn, and Google Scholar." />
   <meta name="author" content="Mahboubeh Motaghi" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 
   <!-- Open Graph / Twitter cards -->
-  <meta property="og:title" content="Mahboubeh Motaghi — Data Scientist" />
+  <meta property="og:title" content="Mahboubeh Motaghi — Data Scientist & PhD Candidate" />
   <meta property="og:description" content="Neuroimaging, AI, and data science projects, publications, and contact." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Mahboubeh Motaghi",
-    "jobTitle": "Data Scientist",
-    "url": "https://YOUR-USERNAME.github.io/",
+    "jobTitle": "Data Scientist, PhD Candidate",
+    "url": "https://YOUR-GITHUB-USERNAME.github.io/",
     "sameAs": [
-      "https://github.com/YOUR-USERNAME",
-      "https://gitlab.com/YOUR-USERNAME",
-      "www.linkedin.com/in/mahboubeh-motaghi-phd-58033759",
-      "https://scholar.google.com/citations?user=CkXNH2MAAAAJ&hl=en"
+      "https://github.com/YOUR-GITHUB-USERNAME",
+      "https://gitlab.com/YOUR-GITLAB-USERNAME",
+      "https://www.linkedin.com/in/YOUR-LINKEDIN/",
+      "https://scholar.google.com/citations?user=YOUR-SCHOLAR-ID"
     ]
   }
   </script>
+
   <style>
-    /* Small critical styles so the first paint looks good even before style.css loads */
     html { scroll-behavior: smooth; }
     body { margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    /* Small tweak to show your photo as avatar in header */
+    .avatar { width: 28px; height: 28px; border-radius: 999px; object-fit: cover; border: 1px solid #ffffff40; }
+    /* Larger hero identity block if you prefer a bigger photo */
+    .hero-id { display: grid; grid-template-columns: 120px 1fr; gap: 16px; align-items: center; }
+    .hero-photo { width: 120px; height: 120px; border-radius: 16px; object-fit: cover; border: 1px solid #ffffff25; box-shadow: var(--shadow); }
+    @media (max-width: 860px) {
+      .hero-id { grid-template-columns: 80px 1fr; }
+      .hero-photo { width: 80px; height: 80px; }
+    }
   </style>
 </head>
 <body>
   <header class="site-header">
     <nav class="container nav">
       <a class="brand" href="#top" aria-label="Home">
-        <img src="assets/logo.svg" alt="" class="logo" /> <span>Mahboubeh Motaghi</span>
+        <!-- Header avatar next to your name -->
+        <img src="assets/me.jpg" alt="Mahboubeh Motaghi" class="avatar" />
+        <span>Mahboubeh Motaghi</span>
       </a>
       <ul class="menu">
         <li><a href="#about">About</a></li>
@@ -57,38 +70,52 @@
   <main id="top">
     <section class="hero container">
       <div class="hero-text">
+        <!-- If you want a larger photo by the headline, swap the next div for .hero-id (example below) -->
+        <!--
+        <div class="hero-id">
+          <img src="assets/me.jpg" alt="Mahboubeh Motaghi" class="hero-photo" />
+          <div>
+            <h1>Neuroimaging × AI<br/>Turning data into decisions</h1>
+            <p>...</p>
+          </div>
+        </div>
+        -->
         <h1>Neuroimaging × AI<br/>Turning data into decisions</h1>
-        <p>I’m a Data Scientist with 5+ years of experience applying machine learning and statistics to large, multi-source datasets in healthcare and e-commerce. My strengths include data querying and cleaning, feature engineering, forecasting, and building end-to-end ML models that translate complex data into clear decisions . I’m hands-on with Python/SQL, AWS, Docker, MLflow, and CI/CD, and experienced with structured/unstructured data, Databricks (Spark), and model interpretability across the full model lifecycle.
-      </p>
-      <p>
-        I’m also a highly analytical PhD candidate focused on medical imaging and AI. I bring expertise in machine learning, deep learning, NLP, and LLMs across diverse domains — from healthcare and e-commerce to clickstream, geomatics, and location-based user data. My research explores MRI-based neuroimaging with large multimodal datasets like UK Biobank and ADNI. I’m adept at end-to-end AI pipelines: robust data integration, model training, and scalable deployment on AWS and Azure. With skills in Python, TensorFlow, PyTorch, Power BI, and experience in MLflow, GitLab CI/CD, GitHub, and Docker, I thrive on collaboration and problem-solving, and have a track record of translating clinical research into production-ready solutions.
-      </p>.</p>
+
+        <p>
+          I’m an accomplished Data Scientist with 5+ years of experience applying machine learning and statistics to large, multi-source datasets in healthcare, e-commerce, and finance. My strengths include data querying and cleaning, feature engineering, forecasting, and building regression/logit models that translate complex data into clear decisions for both technical and non-technical teams. I’m hands-on with Python/SQL, AWS, Docker, MLflow, and CI/CD, and experienced with structured/unstructured data, Databricks (Spark), and model interpretability across the full model lifecycle.
+        </p>
+        <p>
+          I’m also a highly analytical PhD candidate focused on medical imaging and AI. I bring expertise in machine learning, deep learning, NLP, and LLMs across diverse domains — from healthcare and e-commerce to clickstream, geomatics, and location-based user data. My research explores MRI-based neuroimaging with large multimodal datasets like UK Biobank and ADNI. I’m adept at end-to-end AI pipelines: robust data integration, model training, and scalable deployment on AWS and Azure. With skills in Python, TensorFlow, PyTorch, and Power BI, plus experience in MLflow, GitLab CI/CD, GitHub, and Docker, I thrive on collaboration and problem-solving, turning clinical research into production-ready solutions.
+        </p>
+
         <div class="cta">
-          <a class="btn primary" href="assets/Mahboubeh_Motaghi_CV.pdf" target="_blank" rel="noopener">View CV</a>
-          <a class="btn" href="#projects">See Projects</a>
-          <div class="socials" aria-label="Social links">
-            <a href="https://github.com/YOUR-USERNAME" aria-label="GitHub" target="_blank" rel="noopener">
-              <img alt="" src="https://cdn.simpleicons.org/github" />
+          <!-- Social icons -->
+          <div class="socials" aria-label="Social links" style="display:flex;gap:10px;align-items:center;">
+            <a href="https://github.com/YOUR-GITHUB-USERNAME" aria-label="GitHub" target="_blank" rel="noopener">
+              <img alt="GitHub" src="https://cdn.simpleicons.org/github" width="22" height="22" />
             </a>
-            <a href="https://gitlab.com/YOUR-USERNAME" aria-label="GitLab" target="_blank" rel="noopener">
-              <img alt="" src="https://cdn.simpleicons.org/gitlab" />
+            <a href="https://gitlab.com/YOUR-GITLAB-USERNAME" aria-label="GitLab" target="_blank" rel="noopener">
+              <img alt="GitLab" src="https://cdn.simpleicons.org/gitlab" width="22" height="22" />
             </a>
             <a href="https://www.linkedin.com/in/YOUR-LINKEDIN/" aria-label="LinkedIn" target="_blank" rel="noopener">
-              <img alt="" src="https://cdn.simpleicons.org/linkedin" />
+              <!-- Local LinkedIn icon to avoid CDN issues -->
+              <img alt="LinkedIn" src="assets/linkedin.svg" width="22" height="22" />
             </a>
             <a href="https://scholar.google.com/citations?user=YOUR-SCHOLAR-ID" aria-label="Google Scholar" target="_blank" rel="noopener">
-              <img alt="" src="https://cdn.simpleicons.org/googlescholar" />
+              <img alt="Google Scholar" src="https://cdn.simpleicons.org/googlescholar" width="22" height="22" />
             </a>
           </div>
         </div>
       </div>
+
       <div class="hero-card">
         <div class="card">
           <h3>Open to opportunities</h3>
           <ul>
-            <li>Data Scientist / ML Engineer (Canada)</li>
+            <li>Data Scientist / ML Engineer</li>
             <li>Neuroimaging & Healthcare AI</li>
-            <li>MLOps, reproducible research</li>
+            <li>MLOps & reproducible research</li>
           </ul>
           <a class="btn primary block" href="#contact">Get in touch</a>
         </div>
@@ -97,13 +124,15 @@
 
     <section id="about" class="container section">
       <h2>About</h2>
-      <p>My research bridges <strong>relative brain age</strong>, <strong>frailty</strong>, and <strong>Alzheimer’s disease</strong> using large-scale datasets (UK Biobank, ADNI). I enjoy production-grade Python, clean visualization, and shipping results that matter.</p>
+      <p>My work bridges <strong>relative brain age</strong>, <strong>frailty</strong>, and <strong>Alzheimer’s disease</strong> using large-scale datasets (UK Biobank, ADNI). I enjoy production-grade Python, clean visualization, and shipping results that matter.</p>
       <div class="pill-row">
         <span class="pill">Python</span>
         <span class="pill">PyTorch</span>
+        <span class="pill">TensorFlow</span>
         <span class="pill">scikit-learn</span>
         <span class="pill">pandas</span>
         <span class="pill">AWS</span>
+        <span class="pill">Azure</span>
         <span class="pill">MLflow</span>
         <span class="pill">CI/CD</span>
         <span class="pill">Neuroimaging</span>
@@ -113,40 +142,96 @@
     <section id="projects" class="container section">
       <h2>Projects</h2>
       <div class="grid">
+
         <article class="card">
-          <h3>Brain Age + Frailty Dashboard</h3>
-          <p>Interactive analysis of brain-age deltas, frailty index, and cognition. Automated pipelines, clear visuals, and reproducible code.</p>
+          <h3>Bias-Adjusted Brain Age Estimation</h3>
+          <p>Implemented bias adjustment for brain-age delta to correct regression-to-the-mean and age-related bias, improving interpretability across cohorts.</p>
           <div class="links">
-            <a href="https://github.com/YOUR-USERNAME/brain-age-frailty" target="_blank" rel="noopener">Code</a>
-            <a href="#" aria-disabled="true">Demo</a>
+            <a href="https://github.com/YOUR-GITHUB-USERNAME/brain-age-bias-adjust" target="_blank" rel="noopener">Code (GitHub)</a>
+            <a href="https://gitlab.com/YOUR-GITLAB-USERNAME/brain-age-bias-adjust" target="_blank" rel="noopener">Code (GitLab)</a>
           </div>
         </article>
+
         <article class="card">
-          <h3>ENIGMA-style Cortical Maps</h3>
-          <p>Surface-based visualization of cortical thinning patterns using DK atlas alignment & reproducible notebooks.</p>
+          <h3>Cortical Surface Visualizations with Nilearn</h3>
+          <p>High-quality cortical figures using DK atlas alignment and surface plotting; optimized for publications and posters.</p>
           <div class="links">
-            <a href="https://github.com/YOUR-USERNAME/enigma-maps" target="_blank" rel="noopener">Code</a>
-            <a href="#" aria-disabled="true">Paper</a>
+            <a href="https://github.com/YOUR-GITHUB-USERNAME/nilearn-cortical-figures" target="_blank" rel="noopener">Code (GitHub)</a>
+            <a href="https://gitlab.com/YOUR-GITLAB-USERNAME/nilearn-cortical-figures" target="_blank" rel="noopener">Code (GitLab)</a>
           </div>
         </article>
+
         <article class="card">
-          <h3>RAG for Clinical Notes</h3>
-          <p>Prototype retrieval-augmented generation pipeline over de-identified EMR snippets to answer cohort questions.</p>
+          <h3>Permutation-Based Cortical Map Comparison: T2D vs. AD/MCI</h3>
+          <p>Spatial overlap and group-difference mapping with non-parametric permutation tests to quantify shared neurodegenerative patterns.</p>
           <div class="links">
-            <a href="https://gitlab.com/YOUR-USERNAME/clinical-rag" target="_blank" rel="noopener">Code</a>
-            <a href="#" aria-disabled="true">Demo</a>
+            <a href="https://github.com/YOUR-GITHUB-USERNAME/t2d-admci-permutation-maps" target="_blank" rel="noopener">Code (GitHub)</a>
+            <a href="https://gitlab.com/YOUR-GITLAB-USERNAME/t2d-admci-permutation-maps" target="_blank" rel="noopener">Code (GitLab)</a>
           </div>
         </article>
+
+        <article class="card">
+          <h3>Cognitive Trajectory Forecasting with Brain Age & Reserve</h3>
+          <p>End-to-end pipeline to predict cognitive decline leveraging relative brain age and cognitive reserve with longitudinal evaluation.</p>
+          <div class="links">
+            <a href="https://github.com/YOUR-GITHUB-USERNAME/cognitive-trajectory-forecasting" target="_blank" rel="noopener">Code (GitHub)</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Joint Effects of Frailty & Diabetes on Relative Brain Age</h3>
+          <p>Multivariable modeling to quantify independent and joint associations between frailty, diabetes status, and brain-age delta.</p>
+          <div class="links">
+            <a href="https://gitlab.com/YOUR-GITLAB-USERNAME/frailty-diabetes-rba" target="_blank" rel="noopener">Code (GitLab)</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>MCI→AD Conversion Risk Model (Logistic Regression)</h3>
+          <p>Logistic regression using RBA, reserve, age, and sex to estimate risk of progression from MCI to Alzheimer’s disease.</p>
+          <div class="links">
+            <a href="https://github.com/YOUR-GITHUB-USERNAME/mci-to-ad-logit" target="_blank" rel="noopener">Code (GitHub)</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Clustering Antarctic Penguin Species</h3>
+          <p>Unsupervised analysis (K-means) on a curated penguin dataset to reveal clusters, patterns, and relationships across species.</p>
+          <div class="links">
+            <a href="https://github.com/YOUR-GITHUB-USERNAME/penguin-clusters" target="_blank" rel="noopener">Code (GitHub)</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Single-Feature Crop Selector (Feature Importance Study)</h3>
+          <p>Feature selection experiment to identify the single most informative soil metric (N, P, K, or pH) for crop recommendation.</p>
+          <div class="links">
+            <a href="https://github.com/YOUR-GITHUB-USERNAME/crop-feature-selector" target="_blank" rel="noopener">Code (GitHub)</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>E-commerce Demand Forecasting</h3>
+          <p>Upcoming — probabilistic short-/mid-term SKU demand models with calendar, seasonality, and promo signals.</p>
+          <div class="links">
+            <a href="#" aria-disabled="true">Coming soon</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Clickstream Purchase Propensity</h3>
+          <p>Upcoming — session-level purchase prediction using event sequences, dwell time, and referral features.</p>
+          <div class="links">
+            <a href="#" aria-disabled="true">Coming soon</a>
+          </div>
+        </article>
+
       </div>
     </section>
 
     <section id="publications" class="container section">
       <h2>Publications</h2>
-      <p>See my full list on <a href="https://scholar.google.com/citations?user=YOUR-SCHOLAR-ID" target="_blank" rel="noopener">Google Scholar</a>. Selected:</p>
-      <ul class="pubs">
-        <li><strong>BrainAGE: A Superior Measure of Brain Health</strong> — Methods & bias adjustment in brain age frameworks.</li>
-        <li><strong>T2D & AD cortical neurodegeneration</strong> — Overlap of thinning patterns and frailty effects.</li>
-      </ul>
+      <p>See my full list on <a href="https://scholar.google.com/citations?user=YOUR-SCHOLAR-ID" target="_blank" rel="noopener">Google Scholar</a>.</p>
     </section>
 
     <section id="contact" class="container section">
@@ -155,15 +240,16 @@
         <a class="btn primary" href="mailto:Mahboubeh.motaghi@gmail.com">Email me</a>
         <a class="btn" href="https://www.linkedin.com/in/YOUR-LINKEDIN/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
-      <p class="muted">Based in Québec City, Canada.</p>
+      <p class="muted">Based in Canada.</p>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container foot">
-      <small>© <span id="y"></span> Mahboubeh Motaghi — Built with <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> / <a href="https://docs.gitlab.com/ee/user/project/pages/" target="_blank" rel="noopener">GitLab Pages</a></small>
+      <small>© <span id="y"></span> Mahboubeh Motaghi — Built with <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></small>
     </div>
   </footer>
+
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
