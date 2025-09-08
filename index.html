@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mahboubeh Motaghi — Data Scientist</title>
-  <meta name="description" content="Portfolio of Mahboubeh Motaghi: end-to-end machine learning and data science across diverse datasets—healthcare, e-commerce, finance, clickstream, and geospatial." />
+  <meta name="description" content="End-to-end ML across diverse datasets: healthcare, e-commerce, finance, clickstream, and geospatial." />
   <meta name="author" content="Mahboubeh Motaghi" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 
@@ -39,12 +39,9 @@
 
   <style>
     .avatar { width: 28px; height: 28px; border-radius: 999px; object-fit: cover; border: 1px solid #ffffff40; }
-    .hero-id { display: grid; grid-template-columns: 120px 1fr; gap: 16px; align-items: center; }
-    .hero-photo { width: 120px; height: 120px; border-radius: 16px; object-fit: cover; border: 1px solid #ffffff25; box-shadow: var(--shadow); }
-    @media (max-width: 860px) {
-      .hero-id { grid-template-columns: 80px 1fr; }
-      .hero-photo { width: 80px; height: 80px; }
-    }
+    .section h2 { margin-top: 0; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    @media (max-width: 860px){ .grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -55,7 +52,6 @@
         <span>Mahboubeh Motaghi</span>
       </a>
       <ul class="menu">
-        <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a class="btn" href="#contact">Contact</a></li>
@@ -66,15 +62,10 @@
   <main id="top">
     <section class="hero container">
       <div class="hero-text">
-        <h1>ML & Data Science<br/>End-to-End, Data-Driven Impact</h1>
-
+        <h1>ML & Data Science<br/>End-to-End, Across Diverse Data</h1>
         <p>
-          I’m a Data Scientist with 5+ years building <strong>end-to-end machine learning pipelines</strong>—from raw data ingestion and cleaning to feature engineering, modeling, evaluation, and deployment. I work across <strong>diverse datasets</strong>: healthcare, e-commerce, finance, clickstream, and geospatial. I’m hands-on with Python/SQL, AWS & Azure, Docker, MLflow, and CI/CD, and comfortable with both structured and unstructured data at scale (including Databricks/Spark).
+          I build <strong>end-to-end ML pipelines</strong>—from ingestion and cleaning to feature engineering, modeling, evaluation, deployment, and monitoring. My work spans <strong>healthcare, e-commerce, finance, clickstream, and geospatial</strong> data. Hands-on with Python/SQL, PyTorch/TensorFlow, Databricks (Spark), AWS & Azure, Docker, MLflow, and CI/CD.
         </p>
-        <p>
-          My toolkit includes regression & classification (logit, tree-based, DL), forecasting, NLP/LLMs, and interpretation/monitoring across the model lifecycle. I communicate results clearly to technical and non-technical audiences and collaborate closely with product and engineering to ship models that matter.
-        </p>
-
         <div class="cta">
           <div class="socials" style="display:flex;gap:10px;align-items:center;">
             <a href="https://github.com/YOUR-GITHUB-USERNAME" target="_blank" rel="noopener"><img alt="GitHub" src="https://cdn.simpleicons.org/github" width="22" height="22" /></a>
@@ -84,58 +75,139 @@
           </div>
         </div>
       </div>
-
       <div class="hero-card">
         <div class="card">
           <h3>Open to opportunities</h3>
           <ul>
             <li>Data Scientist / ML Engineer</li>
             <li>End-to-end ML & MLOps</li>
-            <li>Experimentation & model explainability</li>
+            <li>Experimentation & explainability</li>
           </ul>
           <a class="btn primary block" href="#contact">Get in touch</a>
         </div>
       </div>
     </section>
 
-    <section id="about" class="container section">
-      <h2>About</h2>
-      <p>
-        I build robust, reproducible ML systems that turn <strong>raw, multi-source data</strong> into decisions. My work spans <strong>healthcare</strong> (neuroimaging, longitudinal outcomes), <strong>e-commerce</strong> (demand & propensity), <strong>finance</strong> (risk signals), <strong>clickstream</strong> (session modeling), and <strong>geospatial/geomatics</strong>. I care about clear baselines, clean data contracts, and shipping results with monitoring.
-      </p>
-    </section>
-
+    <!-- PROJECTS -->
     <section id="projects" class="container section">
-      <h2>Projects</h2>
+      <h2>Core Projects (Neuro/ML)</h2>
       <div class="grid">
         <article class="card">
           <h3>Bias-Adjusted Brain Age Estimation</h3>
-          <p>Corrected regression-to-the-mean and age-related bias in brain-age delta for reliable cross-cohort comparisons; improved interpretability and downstream correlation analyses.</p>
+          <p>Corrects regression-to-mean and age bias in brain-age delta for reliable cross-cohort comparison and downstream correlations.</p>
+          <div class="links">
+            <a href="https://github.com/YOUR-GITHUB-USERNAME/brain-age-bias-adjust" target="_blank" rel="noopener">Code (GitHub)</a>
+            <a href="https://gitlab.com/YOUR-GITLAB-USERNAME/brain-age-bias-adjust" target="_blank" rel="noopener">Code (GitLab)</a>
+          </div>
         </article>
 
         <article class="card">
           <h3>Cortical Surface Visualizations with Nilearn</h3>
-          <p>Publication-ready cortical figures (DK atlas alignment & surface plotting) with reproducible notebooks and streamlined figure pipelines.</p>
+          <p>Publication-ready cortical figures (DK atlas alignment, surface plotting) with reproducible notebooks and streamlined pipelines.</p>
+          <div class="links">
+            <a href="https://github.com/YOUR-GITHUB-USERNAME/nilearn-cortical-figures" target="_blank" rel="noopener">Code (GitHub)</a>
+            <a href="https://gitlab.com/YOUR-GITLAB-USERNAME/nilearn-cortical-figures" target="_blank" rel="noopener">Code (GitLab)</a>
+          </div>
         </article>
 
         <article class="card">
-          <h3>Permutation-Based Cortical Map Comparison: T2D vs. AD/MCI</h3>
-          <p>Non-parametric permutation tests to quantify overlap and group differences in cortical patterns across conditions; spatial stats and robust significance testing.</p>
+          <h3>T2D vs AD/MCI: Permutation-Based Cortical Maps</h3>
+          <p>Non-parametric tests to quantify overlap and group differences in cortical patterns; robust spatial stats & permutation inference.</p>
+          <div class="links">
+            <a href="https://github.com/YOUR-GITHUB-USERNAME/t2d-admci-permutation-maps" target="_blank" rel="noopener">Code (GitHub)</a>
+            <a href="https://gitlab.com/YOUR-GITLAB-USERNAME/t2d-admci-permutation-maps" target="_blank" rel="noopener">Code (GitLab)</a>
+          </div>
         </article>
 
         <article class="card">
           <h3>Cognitive Trajectory Forecasting</h3>
-          <p>Longitudinal modeling leveraging relative brain age & cognitive reserve; feature pipelines, evaluation protocols, and model monitoring.</p>
+          <p>Longitudinal models leveraging relative brain age & reserve; feature pipelines, evaluation protocols, and model monitoring.</p>
+          <div class="links">
+            <a href="https://github.com/YOUR-GITHUB-USERNAME/cognitive-trajectory-forecasting" target="_blank" rel="noopener">Code (GitHub)</a>
+          </div>
         </article>
 
         <article class="card">
           <h3>Frailty & Diabetes: Joint Effects on Brain Age</h3>
-          <p>Multivariable modeling of independent and joint associations between frailty, diabetes, and brain-age delta; clear effect sizing and controls.</p>
+          <p>Multivariable modeling of independent and joint associations with brain-age delta; clear effect sizing and confound control.</p>
+          <div class="links">
+            <a href="https://gitlab.com/YOUR-GITLAB-USERNAME/frailty-diabetes-rba" target="_blank" rel="noopener">Code (GitLab)</a>
+          </div>
         </article>
 
         <article class="card">
           <h3>MCI→AD Conversion Risk (Logistic Regression)</h3>
-          <p>Baseline clinical classifier using RBA, reserve, age, and sex; interpretable features, calibration checks, and decision thresholds.</p>
+          <p>Baseline clinical classifier using RBA, reserve, age, and sex; interpretable features, calibration, and decision thresholds.</p>
+          <div class="links">
+            <a href="https://github.com/YOUR-GITHUB-USERNAME/mci-to-ad-logit" target="_blank" rel="noopener">Code (GitHub)</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>X-ray Image Classification (PyTorch)</h3>
+          <p>Transfer learning and augmentation pipeline for medical X-ray classification; training loops, metrics, and explainability hooks.</p>
+          <div class="links">
+            <a href="https://github.com/YOUR-GITHUB-USERNAME/xray-classifier-pytorch" target="_blank" rel="noopener">Code (GitHub)</a>
+          </div>
+        </article>
+      </div>
+
+      <h2 style="margin-top:60px;">Applied / Industry Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Customer Purchase Behavior (Clustering)</h3>
+          <p>Unsupervised segmentation on clickstream & transaction data to uncover cohorts, preferences, and campaign targets.</p>
+          <div class="links">
+            <a href="https://github.com/YOUR-GITHUB-USERNAME/customer-segmentation-clustering" target="_blank" rel="noopener">Code (GitHub)</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Demand Forecasting for E-commerce</h3>
+          <p>Short-/mid-term SKU demand models with calendar, seasonality, promo signals; evaluation with MAPE/WAPE & backtesting.</p>
+          <div class="links">
+            <a href="https://github.com/YOUR-GITHUB-USERNAME/ecomm-demand-forecasting" target="_blank" rel="noopener">Code (GitHub)</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Clothing Image Classifier</h3>
+          <p>Computer vision model to classify apparel categories; data pipeline, augmentations, confusion matrix & error analysis.</p>
+          <div class="links">
+            <a href="https://github.com/YOUR-GITHUB-USERNAME/ecomm-clothing-classifier" target="_blank" rel="noopener">Code (GitHub)</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Students’ Mental Health (SQL)</h3>
+          <p>Exploratory and diagnostic SQL analysis: data modeling, joins, window functions, KPIs, and insight queries.</p>
+          <div class="links">
+            <a href="https://github.com/YOUR-GITHUB-USERNAME/students-mental-health-sql" target="_blank" rel="noopener">Code (GitHub)</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Healthcare Analytics in Power BI</h3>
+          <p>Interactive dashboarding with measures, slicers, and DAX; cohort trends, outcomes, and drill-downs.</p>
+          <div class="links">
+            <a href="https://github.com/YOUR-GITHUB-USERNAME/healthcare-powerbi" target="_blank" rel="noopener">Overview</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>E-commerce Analysis in Power BI</h3>
+          <p>Revenue funnels, cohort retention, and product performance reporting with clean data models and KPIs.</p>
+          <div class="links">
+            <a href="https://github.com/YOUR-GITHUB-USERNAME/ecommerce-powerbi" target="_blank" rel="noopener">Overview</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Databricks: Large-Scale Data Analysis</h3>
+          <p>Spark-based ETL & feature pipelines; notebooks, job orchestration, and artifact tracking with MLflow.</p>
+          <div class="links">
+            <a href="https://github.com/YOUR-GITHUB-USERNAME/databricks-analysis" target="_blank" rel="noopener">Code (GitHub)</a>
+          </div>
         </article>
       </div>
 
@@ -144,21 +216,29 @@
       <div class="grid">
         <article class="card">
           <h3>🐧 Arctic Penguin Exploration</h3>
-          <p>Unsupervised learning adventure: K-means to uncover clusters and relationships in a curated penguin dataset—EDA, scaling, and silhouette checks.</p>
+          <p>K-means to uncover clusters and relationships in a curated penguin dataset—EDA, scaling, silhouette checks.</p>
+          <div class="links">
+            <a href="https://github.com/YOUR-GITHUB-USERNAME/penguin-clusters" target="_blank" rel="noopener">Code (GitHub)</a>
+          </div>
         </article>
 
         <article class="card">
           <h3>🌱 Smart Crop Selector</h3>
-          <p>Feature selection puzzle for a budget-constrained farmer: identify the single most predictive soil metric (N, P, K, or pH) for crop choice; simple, explainable baseline.</p>
+          <p>Feature selection for a budget-constrained farmer: identify the single most predictive soil metric (N, P, K, or pH).</p>
+          <div class="links">
+            <a href="https://github.com/YOUR-GITHUB-USERNAME/crop-feature-selector" target="_blank" rel="noopener">Code (GitHub)</a>
+          </div>
         </article>
       </div>
     </section>
 
+    <!-- PUBLICATIONS -->
     <section id="publications" class="container section">
       <h2>Publications</h2>
       <p>See my full list on <a href="https://scholar.google.com/citations?user=CkXNH2MAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="container section">
       <h2>Contact</h2>
       <div class="contact">
