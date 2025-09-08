@@ -20,6 +20,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mahboubeh Motaghi",
+    "jobTitle": "Data Scientist, PhD Candidate",
+    "url": "https://YOUR-GITHUB-USERNAME.github.io/",
+    "sameAs": [
+      "https://github.com/YOUR-GITHUB-USERNAME",
+      "https://gitlab.com/YOUR-GITLAB-USERNAME",
+      "https://www.linkedin.com/in/YOUR-LINKEDIN/",
+      "https://scholar.google.com/citations?user=YOUR-SCHOLAR-ID"
+    ]
+  }
+  </script>
+
+  <!-- Small component styles -->
   <style>
     .avatar { width: 28px; height: 28px; border-radius: 999px; object-fit: cover; border: 1px solid #ffffff40; }
     .hero-id { display: grid; grid-template-columns: 120px 1fr; gap: 16px; align-items: center; }
@@ -34,6 +52,7 @@
   <header class="site-header">
     <nav class="container nav">
       <a class="brand" href="#top" aria-label="Home">
+        <!-- Header avatar next to your name -->
         <img src="assets/me.jpg" alt="Mahboubeh Motaghi" class="avatar" />
         <span>Mahboubeh Motaghi</span>
       </a>
@@ -49,6 +68,15 @@
   <main id="top">
     <section class="hero container">
       <div class="hero-text">
+        <!-- If you want a larger photo with the headline, use this block instead of the next <h1> and paragraphs.
+        <div class="hero-id">
+          <img src="assets/me.jpg" alt="Mahboubeh Motaghi" class="hero-photo" />
+          <div>
+            <h1>Neuroimaging × AI<br/>Turning data into decisions</h1>
+            <p>...</p>
+          </div>
+        </div>
+        -->
         <h1>Neuroimaging × AI<br/>Turning data into decisions</h1>
 
         <p>
@@ -59,11 +87,21 @@
         </p>
 
         <div class="cta">
+          <!-- Social icons -->
           <div class="socials" aria-label="Social links" style="display:flex;gap:10px;align-items:center;">
-            <a href="https://github.com/YOUR-GITHUB-USERNAME" target="_blank"><img alt="GitHub" src="https://cdn.simpleicons.org/github" width="22" height="22" /></a>
-            <a href="https://gitlab.com/YOUR-GITLAB-USERNAME" target="_blank"><img alt="GitLab" src="https://cdn.simpleicons.org/gitlab" width="22" height="22" /></a>
-            <a href="https://www.linkedin.com/in/YOUR-LINKEDIN/" target="_blank"><img alt="LinkedIn" src="assets/linkedin.svg" width="22" height="22" /></a>
-            <a href="https://scholar.google.com/citations?user=YOUR-SCHOLAR-ID" target="_blank"><img alt="Google Scholar" src="https://cdn.simpleicons.org/googlescholar" width="22" height="22" /></a>
+            <a href="https://github.com/YOUR-GITHUB-USERNAME" aria-label="GitHub" target="_blank" rel="noopener">
+              <img alt="GitHub" src="https://cdn.simpleicons.org/github" width="22" height="22" />
+            </a>
+            <a href="https://gitlab.com/YOUR-GITLAB-USERNAME" aria-label="GitLab" target="_blank" rel="noopener">
+              <img alt="GitLab" src="https://cdn.simpleicons.org/gitlab" width="22" height="22" />
+            </a>
+            <a href="https://www.linkedin.com/in/YOUR-LINKEDIN/" aria-label="LinkedIn" target="_blank" rel="noopener">
+              <!-- Local LinkedIn icon to avoid CDN issues -->
+              <img alt="LinkedIn" src="assets/linkedin.svg" width="22" height="22" />
+            </a>
+            <a href="https://scholar.google.com/citations?user=YOUR-SCHOLAR-ID" aria-label="Google Scholar" target="_blank" rel="noopener">
+              <img alt="Google Scholar" src="https://cdn.simpleicons.org/googlescholar" width="22" height="22" />
+            </a>
           </div>
         </div>
       </div>
@@ -84,25 +122,110 @@
     <section id="about" class="container section">
       <h2>About</h2>
       <p>My work bridges <strong>relative brain age</strong>, <strong>frailty</strong>, and <strong>Alzheimer’s disease</strong> using large-scale datasets (UK Biobank, ADNI). I enjoy production-grade Python, clean visualization, and shipping results that matter.</p>
+      <div class="pill-row">
+        <span class="pill">Python</span>
+        <span class="pill">PyTorch</span>
+        <span class="pill">TensorFlow</span>
+        <span class="pill">scikit-learn</span>
+        <span class="pill">pandas</span>
+        <span class="pill">AWS</span>
+        <span class="pill">Azure</span>
+        <span class="pill">MLflow</span>
+        <span class="pill">CI/CD</span>
+        <span class="pill">Neuroimaging</span>
+      </div>
     </section>
 
     <section id="projects" class="container section">
       <h2>Projects</h2>
       <div class="grid">
-        <!-- Project cards here (same as before) -->
+
+        <article class="card">
+          <h3>Bias-Adjusted Brain Age Estimation</h3>
+          <p>Implemented bias adjustment for brain-age delta to correct regression-to-the-mean and age-related bias, improving interpretability across cohorts.</p>
+          <div class="links">
+            <a href="https://github.com/YOUR-GITHUB-USERNAME/brain-age-bias-adjust" target="_blank" rel="noopener">Code (GitHub)</a>
+            <a href="https://gitlab.com/YOUR-GITLAB-USERNAME/brain-age-bias-adjust" target="_blank" rel="noopener">Code (GitLab)</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Cortical Surface Visualizations with Nilearn</h3>
+          <p>High-quality cortical figures using DK atlas alignment and surface plotting; optimized for publications and posters.</p>
+          <div class="links">
+            <a href="https://github.com/YOUR-GITHUB-USERNAME/nilearn-cortical-figures" target="_blank" rel="noopener">Code (GitHub)</a>
+            <a href="https://gitlab.com/YOUR-GITLAB-USERNAME/nilearn-cortical-figures" target="_blank" rel="noopener">Code (GitLab)</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Permutation-Based Cortical Map Comparison: T2D vs. AD/MCI</h3>
+          <p>Spatial overlap and group-difference mapping with non-parametric permutation tests to quantify shared neurodegenerative patterns.</p>
+          <div class="links">
+            <a href="https://github.com/YOUR-GITHUB-USERNAME/t2d-admci-permutation-maps" target="_blank" rel="noopener">Code (GitHub)</a>
+            <a href="https://gitlab.com/YOUR-GITLAB-USERNAME/t2d-admci-permutation-maps" target="_blank" rel="noopener">Code (GitLab)</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Cognitive Trajectory Forecasting with Brain Age & Reserve</h3>
+          <p>End-to-end pipeline to predict cognitive decline leveraging relative brain age and cognitive reserve with longitudinal evaluation.</p>
+          <div class="links">
+            <a href="https://github.com/YOUR-GITHUB-USERNAME/cognitive-trajectory-forecasting" target="_blank" rel="noopener">Code (GitHub)</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Joint Effects of Frailty & Diabetes on Relative Brain Age</h3>
+          <p>Multivariable modeling to quantify independent and joint associations between frailty, diabetes status, and brain-age delta.</p>
+          <div class="links">
+            <a href="https://gitlab.com/YOUR-GITLAB-USERNAME/frailty-diabetes-rba" target="_blank" rel="noopener">Code (GitLab)</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>MCI→AD Conversion Risk Model (Logistic Regression)</h3>
+          <p>Logistic regression using RBA, reserve, age, and sex to estimate risk of progression from MCI to Alzheimer’s disease.</p>
+          <div class="links">
+            <a href="https://github.com/YOUR-GITHUB-USERNAME/mci-to-ad-logit" target="_blank" rel="noopener">Code (GitHub)</a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Fun side projects -->
+      <h2 style="margin-top:60px;">🌟 Fun Side Projects</h2>
+      <div class="grid">
+
+        <article class="card">
+          <h3>🐧 Arctic Penguin Exploration</h3>
+          <p>Unsupervised learning adventure! Used K-means clustering to uncover hidden patterns and relationships in penguin species data from icy domains.</p>
+          <div class="links">
+            <a href="https://github.com/YOUR-GITHUB-USERNAME/penguin-clusters" target="_blank" rel="noopener">Code (GitHub)</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>🌱 Smart Crop Selector</h3>
+          <p>A farmer’s dilemma turned into a feature selection puzzle: identifying the single most informative soil metric (N, P, K, or pH) to predict the best crop. A lighthearted take on model interpretability.</p>
+          <div class="links">
+            <a href="https://github.com/YOUR-GITHUB-USERNAME/crop-feature-selector" target="_blank" rel="noopener">Code (GitHub)</a>
+          </div>
+        </article>
+
       </div>
     </section>
 
     <section id="publications" class="container section">
       <h2>Publications</h2>
-      <p>See my full list on <a href="https://scholar.google.com/citations?user=YOUR-SCHOLAR-ID" target="_blank">Google Scholar</a>.</p>
+      <p>See my full list on <a href="https://scholar.google.com/citations?user=YOUR-SCHOLAR-ID" target="_blank" rel="noopener">Google Scholar</a>.</p>
     </section>
 
     <section id="contact" class="container section">
       <h2>Contact</h2>
       <div class="contact">
         <a class="btn primary" href="mailto:Mahboubeh.motaghi@gmail.com">Email me</a>
-        <a class="btn" href="https://www.linkedin.com/in/YOUR-LINKEDIN/" target="_blank">LinkedIn</a>
+        <a class="btn" href="https://www.linkedin.com/in/YOUR-LINKEDIN/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
       <p class="muted">Based in Canada.</p>
     </section>
@@ -110,7 +233,7 @@
 
   <footer class="site-footer">
     <div class="container foot">
-      <small>© <span id="y"></span> Mahboubeh Motaghi — Built with <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></small>
+      <small>© <span id="y"></span> Mahboubeh Motaghi — Built with <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></small>
     </div>
   </footer>
 
