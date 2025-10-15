@@ -27,9 +27,9 @@
     "@type": "Person",
     "name": "Mahboubeh Motaghi",
     "jobTitle": "Data Scientist",
-    "url": "https://YOUR-GITHUB-USERNAME.github.io/",
+    "url": "https://mahboubeh-mt.github.io/",
     "sameAs": [
-      "https://github.com/YOUR-GITHUB-USERNAME",
+      "https://github.com/Mahboubeh-Mt",
       "https://gitlab.com/YOUR-GITLAB-USERNAME",
       "https://www.linkedin.com/in/mahboubeh-motaghi-phd-58033759",
       "https://scholar.google.com/citations?user=CkXNH2MAAAAJ&hl=en"
@@ -41,7 +41,12 @@
     .avatar { width: 28px; height: 28px; border-radius: 999px; object-fit: cover; border: 1px solid #ffffff40; }
     .section h2 { margin-top: 0; }
     .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    @media (max-width: 860px){ .grid { grid-template-columns: 1fr; } }
+    @media (max-width: 980px){ .grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 680px){ .grid { grid-template-columns: 1fr; } }
+    .badgebar{display:flex;gap:8px;flex-wrap:wrap;margin:.5rem 0}
+    .badgebar img{height:20px}
+    .card .links{display:flex;gap:10px;flex-wrap:wrap;margin-top:.5rem}
+    .tag{display:inline-block;font-size:.75rem;background:#ffffff10;border:1px solid #ffffff22;border-radius:999px;padding:.15rem .5rem}
   </style>
 </head>
 <body>
@@ -68,16 +73,16 @@
         </p>
         <div class="cta">
           <div class="socials" style="display:flex;gap:10px;align-items:center;">
-            <a href="https://github.com/YOUR-GITHUB-USERNAME" target="_blank" rel="noopener">
+            <a href="https://github.com/Mahboubeh-Mt" target="_blank" rel="noopener" aria-label="GitHub">
               <img alt="GitHub" src="https://cdn.simpleicons.org/github/ffffff" width="22" height="22" />
             </a>
-            <a href="https://gitlab.com/YOUR-GITLAB-USERNAME" target="_blank" rel="noopener">
+            <a href="https://gitlab.com/YOUR-GITLAB-USERNAME" target="_blank" rel="noopener" aria-label="GitLab">
               <img alt="GitLab" src="https://cdn.simpleicons.org/gitlab/ffffff" width="22" height="22" />
             </a>
-            <a href="https://www.linkedin.com/in/mahboubeh-motaghi-phd-58033759" target="_blank" rel="noopener">
+            <a href="https://www.linkedin.com/in/mahboubeh-motaghi-phd-58033759" target="_blank" rel="noopener" aria-label="LinkedIn">
               <img alt="LinkedIn" src="https://cdn.simpleicons.org/linkedin/ffffff" width="22" height="22" />
             </a>
-            <a href="https://scholar.google.com/citations?user=CkXNH2MAAAAJ&hl=en" target="_blank" rel="noopener">
+            <a href="https://scholar.google.com/citations?user=CkXNH2MAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">
               <img alt="Google Scholar" src="https://cdn.simpleicons.org/googlescholar/ffffff" width="22" height="22" />
             </a>
           </div>
@@ -98,93 +103,116 @@
 
     <!-- PROJECTS -->
     <section id="projects" class="container section">
-      <h2>Core Projects (Neuro/ML)</h2>
+      <h2>Projects by Domain</h2>
+
+      <!-- MLOps & Explainability -->
+      <h3 style="margin-top:24px">MLOps & Explainability</h3>
       <div class="grid">
         <article class="card">
-          <h3>Bias-Adjusted Brain Age Estimation</h3>
+          <h4 style="margin-bottom:.25rem">ML Explainability Pipeline (SVR + SHAP) — Power BI-Ready</h4>
+          <div class="badgebar">
+            <img alt="Python" src="https://img.shields.io/badge/python-3.12-blue" />
+            <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-green.svg" />
+            <img alt="ruff" src="https://img.shields.io/badge/code%20style-ruff-informational" />
+            <img alt="pre-commit" src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white" />
+            <img alt="stars" src="https://img.shields.io/github/stars/Mahboubeh-Mt/ml-explainability-pipeline?style=social" />
+            <img alt="issues" src="https://img.shields.io/github/issues/Mahboubeh-Mt/ml-explainability-pipeline" />
+          </div>
+          <p>
+            Production-minded, fully reproducible pipeline that trains SVR on configurable features/targets, evaluates across multiple time intervals, and exports <strong>Power BI-ready</strong> metrics, predictions, and SHAP explainability (summaries + donut charts).
+          </p>
+          <p class="muted">
+            <span class="tag">YAML-driven</span> <span class="tag">SHAP</span> <span class="tag">CI/CD</span> <span class="tag">pytest</span> <span class="tag">mypy</span>
+          </p>
+          <div class="links">
+            <a class="btn" href="https://github.com/Mahboubeh-Mt/ml-explainability-pipeline" target="_blank" rel="noopener">Repo</a>
+            <a class="btn" href="https://github.com/Mahboubeh-Mt/ml-explainability-pipeline#readme" target="_blank" rel="noopener">README</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- NLP / Apps -->
+      <h3 style="margin-top:32px">NLP & Lightweight Apps</h3>
+      <div class="grid">
+        <article class="card">
+          <h4 style="margin-bottom:.25rem">doc-summarizer — concise summaries from long docs</h4>
+          <div class="badgebar">
+            <img alt="Python" src="https://img.shields.io/badge/python-3.11+-blue" />
+            <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-green.svg" />
+          </div>
+          <p>
+            Tiny, production-style tool that turns PDFs/TXT/MD into clean Markdown summaries. Runs <strong>offline (extractive)</strong> by default; optional <strong>LLM mode</strong> (OpenAI) for abstractive summaries with safe fallbacks.
+          </p>
+          <p class="muted">
+            <span class="tag">CLI</span> <span class="tag">Streamlit</span> <span class="tag">Chunking</span> <span class="tag">.env</span>
+          </p>
+          <div class="links">
+            <a class="btn" href="https://github.com/Mahboubeh-Mt/doc-summarizer" target="_blank" rel="noopener">Repo</a>
+            <a class="btn" href="https://github.com/Mahboubeh-Mt/doc-summarizer#readme" target="_blank" rel="noopener">README</a>
+            <!-- Optional live app link if you keep it hosted:
+            <a class="btn primary" href="https://doc-summarizer-msdvspmdmmgyf8xgxvcmqb.streamlit.app/" target="_blank" rel="noopener">Open in Streamlit</a>
+            -->
+          </div>
+        </article>
+      </div>
+
+      <!-- E-commerce / Customer Analytics -->
+      <h3 style="margin-top:32px">E-commerce & Customer Analytics</h3>
+      <div class="grid">
+        <article class="card">
+          <h4 style="margin-bottom:.25rem">Customer Clustering & Segmentation Pipeline</h4>
+          <div class="badgebar">
+            <img alt="Python" src="https://img.shields.io/badge/python-3.11+-blue" />
+            <img alt="CI" src="https://img.shields.io/github/actions/workflow/status/Mahboubeh-Mt/customer-clustering/ci.yml?label=CI" />
+          </div>
+          <p>
+            End-to-end pipeline on a synthetic, privacy-safe ecommerce dataset. Dual clustering (<strong>K-Means + HDBSCAN</strong>) with automatic selection, <strong>Decision Tree</strong> explanations, MLflow tracking, and <strong>Power BI-ready</strong> exports (star schema).
+          </p>
+          <p class="muted">
+            <span class="tag">RFM</span> <span class="tag">UMAP/PCA</span> <span class="tag">MLflow</span> <span class="tag">pytest</span>
+          </p>
+          <div class="links">
+            <a class="btn" href="https://github.com/Mahboubeh-Mt/customer-clustering" target="_blank" rel="noopener">Repo</a>
+            <a class="btn" href="https://github.com/Mahboubeh-Mt/customer-clustering#readme" target="_blank" rel="noopener">README</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Healthcare / NLP -->
+      <h3 style="margin-top:32px">Healthcare NLP</h3>
+      <div class="grid">
+        <article class="card">
+          <h4 style="margin-bottom:.25rem">medlex-spotter — medical lexicon spotter</h4>
+          <div class="badgebar">
+            <img alt="Python" src="https://img.shields.io/badge/python-3.11+-blue" />
+          </div>
+          <p>
+            Lightweight toolkit for spotting domain terms in medical text (lexicon-guided). Clean packaging, tests, and GitHub Actions for reliability.
+          </p>
+          <p class="muted">
+            <span class="tag">Healthcare</span> <span class="tag">NLP</span> <span class="tag">CI/CD</span>
+          </p>
+          <div class="links">
+            <a class="btn" href="https://github.com/Mahboubeh-Mt/medlex-spotter" target="_blank" rel="noopener">Repo</a>
+            <a class="btn" href="https://github.com/Mahboubeh-Mt/medlex-spotter#readme" target="_blank" rel="noopener">README</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- (Optional) Neuro/ML research cards — keep if you like -->
+      <h3 style="margin-top:48px">Neuro/ML Research (selected)</h3>
+      <div class="grid">
+        <article class="card">
+          <h4>Bias-Adjusted Brain Age Estimation</h4>
           <p>Corrects regression-to-mean and age bias in brain-age delta for reliable cross-cohort comparison and downstream correlations.</p>
         </article>
-
         <article class="card">
-          <h3>Cortical Surface Visualizations with Nilearn</h3>
+          <h4>Cortical Surface Visualizations with Nilearn</h4>
           <p>Publication-ready cortical figures (DK atlas alignment, surface plotting) with reproducible notebooks and streamlined pipelines.</p>
         </article>
-
         <article class="card">
-          <h3>T2D vs AD/MCI: Permutation-Based Cortical Maps</h3>
+          <h4>T2D vs AD/MCI: Permutation-Based Cortical Maps</h4>
           <p>Non-parametric tests to quantify overlap and group differences in cortical patterns; robust spatial stats & permutation inference.</p>
-        </article>
-
-        <article class="card">
-          <h3>Cognitive Trajectory Forecasting</h3>
-          <p>Longitudinal models leveraging relative brain age & reserve; feature pipelines, evaluation protocols, and model monitoring.</p>
-        </article>
-
-        <article class="card">
-          <h3>Frailty & Diabetes: Joint Effects on Brain Age</h3>
-          <p>Multivariable modeling of independent and joint associations with brain-age delta; clear effect sizing and confound control.</p>
-        </article>
-
-        <article class="card">
-          <h3>MCI→AD Conversion Risk (Logistic Regression)</h3>
-          <p>Baseline clinical classifier using RBA, reserve, age, and sex; interpretable features, calibration, and decision thresholds.</p>
-        </article>
-
-        <article class="card">
-          <h3>X-ray Image Classification (PyTorch)</h3>
-          <p>Transfer learning and augmentation pipeline for medical X-ray classification; training loops, metrics, and explainability hooks.</p>
-        </article>
-      </div>
-
-      <h2 style="margin-top:60px;">Applied / Industry Projects</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Customer Purchase Behavior (Clustering)</h3>
-          <p>Unsupervised segmentation on clickstream & transaction data to uncover cohorts, preferences, and campaign targets.</p>
-        </article>
-
-        <article class="card">
-          <h3>Demand Forecasting for E-commerce</h3>
-          <p>Short-/mid-term SKU demand models with calendar, seasonality, promo signals; evaluation with MAPE/WAPE & backtesting.</p>
-        </article>
-
-        <article class="card">
-          <h3>Clothing Image Classifier</h3>
-          <p>Computer vision model to classify apparel categories; data pipeline, augmentations, confusion matrix & error analysis.</p>
-        </article>
-
-        <article class="card">
-          <h3>Students’ Mental Health (SQL)</h3>
-          <p>Exploratory and diagnostic SQL analysis: data modeling, joins, window functions, KPIs, and insight queries.</p>
-        </article>
-
-        <article class="card">
-          <h3>Healthcare Analytics in Power BI</h3>
-          <p>Interactive dashboarding with measures, slicers, and DAX; cohort trends, outcomes, and drill-downs.</p>
-        </article>
-
-        <article class="card">
-          <h3>E-commerce Analysis in Power BI</h3>
-          <p>Revenue funnels, cohort retention, and product performance reporting with clean data models and KPIs.</p>
-        </article>
-
-        <article class="card">
-          <h3>Databricks: Large-Scale Data Analysis</h3>
-          <p>Spark-based ETL & feature pipelines; notebooks, job orchestration, and artifact tracking with MLflow.</p>
-        </article>
-      </div>
-
-      <!-- Fun side projects -->
-      <h2 style="margin-top:60px;">🌟 Fun Side Projects</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>🐧 Arctic Penguin Exploration</h3>
-          <p>K-means to uncover clusters and relationships in a curated penguin dataset—EDA, scaling, silhouette checks.</p>
-        </article>
-
-        <article class="card">
-          <h3>🌱 Smart Crop Selector</h3>
-          <p>Feature selection for a budget-constrained farmer: identify the single most predictive soil metric (N, P, K, or pH).</p>
         </article>
       </div>
     </section>
@@ -201,6 +229,7 @@
       <div class="contact">
         <a class="btn primary" href="mailto:Mahboubeh.motaghi@gmail.com">Email me</a>
         <a class="btn" href="https://www.linkedin.com/in/mahboubeh-motaghi-phd-58033759" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/Mahboubeh-Mt" target="_blank" rel="noopener">GitHub</a>
       </div>
       <p class="muted">Based in Canada.</p>
     </section>
