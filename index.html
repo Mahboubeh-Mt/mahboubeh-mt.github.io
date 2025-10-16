@@ -159,6 +159,36 @@
     <section id="projects" class="container section">
       <h2>Projects by Domain</h2>
 
+      <!-- Healthcare Data Harmonization -->
+      <h3 class="section-sub">Healthcare Data Harmonization</h3>
+      <div class="grid">
+        <article class="card">
+          <h4>🩺 Health-Data-Harmonizer — Turning messy health data into clean, consistent science</h4>
+          <div class="badgebar">
+            <img alt="Python" src="https://img.shields.io/badge/python-3.12-blue" />
+            <img alt="CI" src="https://img.shields.io/github/actions/workflow/status/Mahboubeh-Mt/health-data-harmonizer/ci.yml?label=CI" />
+            <img alt="MIT" src="https://img.shields.io/badge/License-MIT-green.svg" />
+          </div>
+          <p>
+            A tiny, configuration-driven Python library that standardizes health cohort variables across datasets.
+            Handles <strong>aliases</strong>, <strong>unit conversions</strong> (e.g., glucose/HbA1c, LDL/HDL), and
+            <strong>categorical encodings</strong> (e.g., sex, diabetes, hypertension) with simple imputation and range checks.
+            Load a YAML config, run <code>.transform()</code>, and get a clean DataFrame—ready for analysis.
+          </p>
+          <p class="muted">
+            <span class="tag">YAML-driven</span>
+            <span class="tag">Aliases</span>
+            <span class="tag">Units</span>
+            <span class="tag">HbA1c</span>
+            <span class="tag">CI/CD</span>
+          </p>
+          <div class="links">
+            <a class="btn" href="https://github.com/Mahboubeh-Mt/health-data-harmonizer" target="_blank" rel="noopener">Repo</a>
+            <a class="btn" href="https://github.com/Mahboubeh-Mt/health-data-harmonizer#readme" target="_blank" rel="noopener">README</a>
+          </div>
+        </article>
+      </div>
+
       <!-- MLOps & Explainability -->
       <h3 class="section-sub">MLOps & Explainability</h3>
       <div class="grid">
@@ -264,7 +294,6 @@
       <small>© <span id="y"></span> Mahboubeh Motaghi — Built with <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></small>
     </div>
   </footer>
-
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
